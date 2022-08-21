@@ -15,8 +15,7 @@ public class ProFinfin {
         infaCli.clientesBase();
         interfazInventario infaInv = new interfazInventario();
         infaInv.inventarioBase();
-        interfazFacturacion infafac = new interfazFacturacion();
-        MenuGUI principal =new MenuGUI ();
-        principal.setVisible(true);
+        MenuGUI men = new MenuGUI();
+        men.setVisible(true);
     }
 }

@@ -11,7 +11,7 @@ public class interfazCliente extends javax.swing.JFrame {
     public interfazCliente() {
         initComponents();
         cargarClientes();
-        
+               
     }
 
     /**
@@ -117,7 +117,7 @@ public class interfazCliente extends javax.swing.JFrame {
                     .addComponent(titemClidiag))
                 .addGap(35, 35, 35)
                 .addComponent(diagagreCli)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         datosClientemod.setBounds(new java.awt.Rectangle(100, 200, 260, 280));
@@ -188,7 +188,7 @@ public class interfazCliente extends javax.swing.JFrame {
                     .addComponent(titemClidiag1))
                 .addGap(38, 38, 38)
                 .addComponent(diagagreCli1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -211,7 +211,7 @@ public class interfazCliente extends javax.swing.JFrame {
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Menú de Mantenimiento de clientes");
 
-        agregar.setIcon(new javax.swing.ImageIcon("F:\\FundProg\\FacturacionTienda\\ProFinfin\\src\\main\\resources\\Add.png")); // NOI18N
+        agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Add.png"))); // NOI18N
         agregar.setText("Agregar");
         agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

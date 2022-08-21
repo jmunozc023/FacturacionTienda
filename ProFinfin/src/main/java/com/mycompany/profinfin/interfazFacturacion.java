@@ -1,8 +1,7 @@
 package com.mycompany.profinfin;
 
 
-import java.sql.SQLOutput;
-import java.util.List;
+
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -162,7 +161,7 @@ public class interfazFacturacion extends javax.swing.JFrame {
                 .addComponent(scrollfactura, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Totalfac, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
