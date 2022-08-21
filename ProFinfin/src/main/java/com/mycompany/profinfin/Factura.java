@@ -15,7 +15,7 @@ public class Factura {
     }
     private String producto;
     private String total;
-    private float iva;
+    private String iva;
     private String subtotal;
     private String cantidadart;
     
@@ -35,11 +35,11 @@ public class Factura {
         this.total = total;
     }
 
-    public float getIva() {
+    public String getIva() {
         return iva;
     }
 
-    public void setIva(float iva) {
+    public void setIva(String iva) {
         this.iva = iva;
     }
 
@@ -51,7 +51,7 @@ public class Factura {
         this.subtotal = subtotal;
     }
 
-    public Factura(String producto, String total, float iva, String subtotal, String cantidadart) {
+    public Factura(String producto, String total, String iva, String subtotal, String cantidadart) {
         this.producto=producto;
         this.total = total;
         this.iva = iva;

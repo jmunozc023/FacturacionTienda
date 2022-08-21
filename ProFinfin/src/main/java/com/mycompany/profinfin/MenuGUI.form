@@ -27,20 +27,18 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Creditos" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="MantClientesGUI" min="-2" pref="214" max="-2" attributes="0"/>
-                      <Component id="MantInvGUI" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace min="82" pref="82" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Creditos" min="-2" max="-2" attributes="0"/>
+                  <Component id="MantInvGUI" max="32767" attributes="0"/>
+                  <Component id="MantClientesGUI" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="salirGUI" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="cierreCajaGUI" max="32767" attributes="0"/>
-                      <Component id="facturacionGUI" min="-2" pref="205" max="-2" attributes="0"/>
+                      <Component id="cierreCajaGUI" alignment="1" pref="214" max="32767" attributes="0"/>
+                      <Component id="facturacionGUI" alignment="1" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -93,6 +91,15 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Mant. Clientes"/>
         <Property name="focusPainted" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[214, 110]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[214, 110]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[214, 110]"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MantClientesGUIActionPerformed"/>
@@ -117,6 +124,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Facturacion"/>
         <Property name="focusPainted" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[214, 110]"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="facturacionGUIActionPerformed"/>
