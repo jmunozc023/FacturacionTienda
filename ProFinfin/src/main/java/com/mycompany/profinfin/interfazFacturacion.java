@@ -356,7 +356,7 @@ public class interfazFacturacion extends javax.swing.JFrame {
         }
        
     }
-    private void facprod(){
+    public void facprod(){
         int prod = SelInventario.getSelectedIndex();
             String produc= "";
             Factura fact =  new Factura(produc);
