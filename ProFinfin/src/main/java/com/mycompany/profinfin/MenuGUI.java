@@ -4,6 +4,7 @@ public class MenuGUI extends javax.swing.JFrame {
     interfazCliente incli=new interfazCliente();
     interfazInventario ininv= new interfazInventario();
     interfazFacturacion infac = new interfazFacturacion();
+    interfazCierreCaja incie= new interfazCierreCaja();
     public MenuGUI() {
         initComponents();
     }
@@ -185,7 +186,9 @@ public class MenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_facturacionGUIActionPerformed
 
     private void cierreCajaGUIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cierreCajaGUIActionPerformed
-        // TODO add your handling code here:
+        if (evt.getSource()==cierreCajaGUI) {
+            incie.setVisible(true);
+        }
     }//GEN-LAST:event_cierreCajaGUIActionPerformed
 
     private void salirGUIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirGUIActionPerformed

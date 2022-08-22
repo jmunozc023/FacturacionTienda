@@ -36,7 +36,7 @@
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="Refrescar" alignment="1" max="32767" attributes="0"/>
-                          <Component id="agregar" alignment="1" max="32767" attributes="0"/>
+                          <Component id="cierre" alignment="1" max="32767" attributes="0"/>
                           <Component id="eliminar1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -55,7 +55,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-              <Component id="agregar" min="-2" max="-2" attributes="0"/>
+              <Component id="cierre" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Refrescar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -83,13 +83,25 @@
         <Component class="javax.swing.JTable" name="tablaCierre">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="2" rowCount="0">
+              <Table columnCount="4" rowCount="0">
                 <Column editable="true" title="Cliente" type="java.lang.Object"/>
+                <Column editable="true" title="Num. telefono" type="java.lang.Object"/>
+                <Column editable="true" title="Emaiil" type="java.lang.Object"/>
                 <Column editable="true" title="Total Compra" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="1">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -119,15 +131,15 @@
         <Property name="text" type="java.lang.String" value="Men&#xfa; de Cierre de caja"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="agregar">
+    <Component class="javax.swing.JButton" name="cierre">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Add.png"/>
+          <Image iconType="3" name="/facturar.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Agregar"/>
+        <Property name="text" type="java.lang.String" value="Cierre"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agregarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cierreActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="eliminar1">

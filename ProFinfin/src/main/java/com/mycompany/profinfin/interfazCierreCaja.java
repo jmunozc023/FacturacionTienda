@@ -9,7 +9,7 @@ public class interfazCierreCaja extends javax.swing.JFrame {
     
     public interfazCierreCaja() {
         initComponents();
-        cargarInventario();
+        cargarCierre();
     }
 
     /**
@@ -24,7 +24,7 @@ public class interfazCierreCaja extends javax.swing.JFrame {
         scrollClientes = new javax.swing.JScrollPane();
         tablaCierre = new javax.swing.JTable();
         Titulo = new javax.swing.JLabel();
-        agregar = new javax.swing.JButton();
+        cierre = new javax.swing.JButton();
         eliminar1 = new javax.swing.JButton();
         Refrescar = new javax.swing.JButton();
 
@@ -38,7 +38,7 @@ public class interfazCierreCaja extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Cliente", "Total Compra"
+                "Cliente", "Num. telefono", "Emaiil", "Total Compra"
             }
         ));
         tablaCierre.setColumnSelectionAllowed(true);
@@ -50,11 +50,11 @@ public class interfazCierreCaja extends javax.swing.JFrame {
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Menú de Cierre de caja");
 
-        agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Add.png"))); // NOI18N
-        agregar.setText("Agregar");
-        agregar.addActionListener(new java.awt.event.ActionListener() {
+        cierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/facturar.png"))); // NOI18N
+        cierre.setText("Cierre");
+        cierre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarActionPerformed(evt);
+                cierreActionPerformed(evt);
             }
         });
 
@@ -84,7 +84,7 @@ public class interfazCierreCaja extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Refrescar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(agregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cierre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(eliminar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(scrollClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -97,7 +97,7 @@ public class interfazCierreCaja extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(116, 116, 116)
-                .addComponent(agregar)
+                .addComponent(cierre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Refrescar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -114,43 +114,43 @@ public class interfazCierreCaja extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
+    private void cierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cierreActionPerformed
         
-    }//GEN-LAST:event_agregarActionPerformed
+    }//GEN-LAST:event_cierreActionPerformed
     
     private void eliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar1ActionPerformed
         this.dispose();
     }//GEN-LAST:event_eliminar1ActionPerformed
 
     private void RefrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefrescarActionPerformed
-        clearInventario();
-        cargarInventario();
+        clearCierre();
+        cargarCierre();
     }//GEN-LAST:event_RefrescarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public void cargarInventario(){
-        DefaultTableModel modelo = new DefaultTableModel(new String[]{"Codigo", "Nombre", "Cantidad", "Precio unitario"}, ProFinfin.inv.size());
+    public void cargarCierre(){
+        DefaultTableModel modelo = new DefaultTableModel(new String[]{"Cliente", "Num. Telefono", "Email", "Total Compra"}, ProFinfin.cie.size());
         tablaCierre.setModel(modelo);
         
         TableModel modeloDatos= tablaCierre.getModel();
-        for (int i = 0; i < ProFinfin.inv.size(); i++) {
-            Articulos articulo1=ProFinfin.inv.get(i);
-            modeloDatos.setValueAt(articulo1.getPosicion(), i, 0);
-            modeloDatos.setValueAt(articulo1.getInvNombre(), i, 1);
-            modeloDatos.setValueAt(articulo1.getCantDisp(), i, 2);
-            modeloDatos.setValueAt(articulo1.getPrecio(), i, 3);
+        for (int i = 0; i < ProFinfin.cie.size(); i++) {
+            Cierre cierreC=ProFinfin.cie.get(i);
+            modeloDatos.setValueAt(cierreC.getCliente(), i, 0);
+            modeloDatos.setValueAt(cierreC.getNumtel(), i, 1);
+            modeloDatos.setValueAt(cierreC.getEmail(), i, 2);
+            modeloDatos.setValueAt(cierreC.getTotalCompra(), i, 3);
         }
     }
-    public void clearInventario(){
+    public void clearCierre(){
        tablaCierre.removeAll();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Refrescar;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton agregar;
+    private javax.swing.JButton cierre;
     private javax.swing.JButton eliminar1;
     private javax.swing.JScrollPane scrollClientes;
     private javax.swing.JTable tablaCierre;

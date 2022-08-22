@@ -6,11 +6,13 @@ public class ProFinfin {
     public static ArrayList<Cliente> cl;
     public static ArrayList<Articulos> inv;
     public static ArrayList<Factura> fac;
+    public static ArrayList<Cierre> cie;
 
     public static void main(String[] args) {
          cl =new ArrayList<>();
         inv =new ArrayList<>();
         fac =new ArrayList<>();
+        cie =new ArrayList<>();
         interfazCliente infaCli = new interfazCliente();
         infaCli.clientesBase();
         interfazInventario infaInv = new interfazInventario();

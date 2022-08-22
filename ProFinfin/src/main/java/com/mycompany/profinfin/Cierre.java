@@ -4,7 +4,27 @@ public class Cierre {
 
    
     private String cliente;
-    private String totalCompra;
+    private String numtel;
+    private String email;
+
+    
+    private double totalCompra;
+    public String getNumtel() {
+        return numtel;
+    }
+
+    public void setNumtel(String numtel) {
+        this.numtel = numtel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
 
     public String getCliente() {
         return cliente;
@@ -14,16 +34,18 @@ public class Cierre {
         this.cliente = cliente;
     }
 
-    public String getTotalCompra() {
+    public double getTotalCompra() {
         return totalCompra;
     }
 
-    public void setTotalCompra(String totalCompra) {
+    public void setTotalCompra(double totalCompra) {
         this.totalCompra = totalCompra;
     }
     
-     public Cierre(String cliente, String totalCompra) {
+     public Cierre(String cliente, String numtel, String email, double totalCompra) {
         this.cliente = cliente;
+        this.numtel = numtel;
+        this.email = email;
         this.totalCompra = totalCompra;
     }
     
